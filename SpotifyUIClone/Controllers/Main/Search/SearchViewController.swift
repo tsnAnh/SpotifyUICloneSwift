@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  SpotifyUIClone
 //
-//  Created by Anh Trần Sĩ Nguyên on 27/04/2022.
+//  Created by Anh Trần Sĩ Nguyên on 08/05/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
