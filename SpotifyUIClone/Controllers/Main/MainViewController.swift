@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UITabBarController {
+    private var spotifyTabBar: SpotifyTabBar!
+    private let tabBarHeight: CGFloat = 64
     
     let homeViewController = HomeViewController()
     let searchViewController = SearchViewController()
@@ -20,20 +23,29 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        setupTabBar()
         
-
-        homeNavigation = UINavigationController(rootViewController: homeViewController)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    fileprivate func setupTabBar() {
+        let tabItems: [TabItem] = [.home, .search, .library]
+        var controllers = [UIViewController]()
+        spotifyTabBar = SpotifyTabBar(menuItems: tabItems, frame: .zero)
+        spotifyTabBar.clipsToBounds = true
+        spotifyTabBar.itemTapped = changeTab(index:)
+        tabBar.addSubview(spotifyTabBar)
         
-        searchNavigation = UINavigationController(rootViewController: searchViewController)
+        tabItems.forEach {
+            controllers.append($0.viewController)
+        }
         
-        libraryNavigation = UINavigationController(rootViewController: libraryViewController)
-        
-        homeNavigation.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        searchNavigation.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
-        libraryNavigation.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "folder"), selectedImage: UIImage(systemName: "folder.fill"))
-        
-        self.viewControllers = [homeNavigation, searchNavigation, libraryNavigation]
-        modalPresentationStyle = .fullScreen
+        view.layoutIfNeeded()
+        self.viewControllers = controllers
+        selectedIndex = 0
+    }
+    
+    func changeTab(index: Int) {
+        self.selectedIndex = index
     }
 }

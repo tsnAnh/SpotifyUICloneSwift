@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wam-59-ajn" customClass="SpotifyTabBarItem" customModule="SpotifyUIClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M84-QM-3I4">
+                    <rect key="frame" x="8" y="34" width="398" height="858"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ejP-X5-iPd">
+                    <rect key="frame" x="195" y="8" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="EWZ-g5-682"/>
+                        <constraint firstAttribute="height" constant="24" id="nJZ-kM-Yq6"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="c5S-ts-Xni"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="ejP-X5-iPd" firstAttribute="top" secondItem="wam-59-ajn" secondAttribute="top" constant="8" id="Ajf-iK-eNz"/>
+                <constraint firstItem="ejP-X5-iPd" firstAttribute="centerX" secondItem="wam-59-ajn" secondAttribute="centerX" id="KfW-hr-oRg"/>
+                <constraint firstAttribute="trailing" secondItem="M84-QM-3I4" secondAttribute="trailing" constant="8" id="R3H-Jk-3wu"/>
+                <constraint firstItem="M84-QM-3I4" firstAttribute="leading" secondItem="wam-59-ajn" secondAttribute="leading" constant="8" id="kAm-DZ-dO4"/>
+                <constraint firstAttribute="bottom" secondItem="M84-QM-3I4" secondAttribute="bottom" constant="4" id="twG-GI-9pc"/>
+                <constraint firstItem="M84-QM-3I4" firstAttribute="top" secondItem="ejP-X5-iPd" secondAttribute="bottom" constant="2" id="xah-pf-4LY"/>
+            </constraints>
+            <connections>
+                <outlet property="icon" destination="ejP-X5-iPd" id="oeS-5C-Eji"/>
+                <outlet property="label" destination="M84-QM-3I4" id="7kK-yR-Yha"/>
+            </connections>
+            <point key="canvasLocation" x="-320.28985507246381" y="-152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
