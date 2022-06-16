@@ -8,51 +8,45 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import RxDataSources
 
 final class HomeViewController: BaseViewController {
 
-    @IBOutlet private weak var notificationsIcon: UIImageView!
-    @IBOutlet private weak var historyIcon: UIImageView!
-    @IBOutlet private weak var settingsIcon: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var recentlyListenList: UICollectionView!
-    
+    @IBOutlet private weak var homeList: UITableView!
+
     private var disposeBag = DisposeBag()
-    
-    let recentlyListenItems = [
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-        RecentlyListenItemUiModel(imageUrl: "https://imgix.bustle.com/uploads/image/2022/3/29/ac951bf3-0cad-4d84-80b9-565c9a69ffce-moon-knight-header.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fm=jpg&fp-x=0.4667&fp-y=0.307", title: "Test"),
-    ]
-    
+
+    private let homeToolbarCell = HomeHeaderTableViewCell()
+
+    private let viewModel = HomeViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupRecentlyListenList()
-    }
-    
-    private func setupRecentlyListenList() {
-        let nib = UINib(nibName: "RecentListenCollectionViewCell", bundle: Bundle.main)
-        recentlyListenList.register(nib, forCellWithReuseIdentifier: "cell")
-        recentlyListenList.delegate = self
-        recentlyListenList.backgroundColor = .clear
-        
-        let observable = Observable.of(recentlyListenItems)
-        
-        observable.bind(to: recentlyListenList.rx.items(cellIdentifier: "cell", cellType: RecentListenCollectionViewCell.self)) { index, element, cell in
-            cell.bind(recentlyListenItemModel: element)
-        }.disposed(by: disposeBag)
-    }
-}
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-            let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-            let size:CGFloat = (recentlyListenList.frame.size.width - space) / 2.0
-            return CGSize(width: size, height: 48)
-        }
+        configureHomeTableView()
+
+        bindTableView()
+    }
+
+    private func configureHomeTableView() {
+        let headerCellNibName = String(describing: HomeHeaderTableViewCell.self)
+        let recentlyCellNibName = String(describing: RecentlyListenListTableViewCell.self)
+        let homeSublistNibName = String(describing: HomeItemSublistTableViewCell.self)
+
+        let headerNib = UINib(nibName: headerCellNibName, bundle: .main)
+        let recentlyListenNib = UINib(nibName: recentlyCellNibName, bundle: .main)
+        let homeSublistNib = UINib(nibName: homeSublistNibName, bundle: .main)
+        homeList.register(headerNib, forCellReuseIdentifier: "header-cell")
+        homeList.register(recentlyListenNib, forCellReuseIdentifier: "recently-cell")
+        homeList.register(homeSublistNib, forCellReuseIdentifier: "home-sublist-cell")
+        homeList.allowsSelection = false
+        homeList.dataSource = nil
+        homeList.delegate = nil
+    }
+
+    private func bindTableView() {
+        viewModel.items
+            .bind(to: homeList.rx.items(dataSource: HomeDataSource.homeDataSource()))
+                .disposed(by: disposeBag)
+    }
 }

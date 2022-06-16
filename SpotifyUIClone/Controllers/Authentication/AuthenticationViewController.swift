@@ -12,9 +12,9 @@ import RxCocoa
 class AuthenticationViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
-    
+
     @IBOutlet weak var btnLogin: SpotifyButton!
-    
+
     fileprivate func setupButton() {
         btnLogin.rx
             .tap
@@ -29,7 +29,7 @@ class AuthenticationViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

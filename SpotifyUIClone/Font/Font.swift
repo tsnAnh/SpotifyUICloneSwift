@@ -17,7 +17,7 @@ struct Font {
         case systemWeighted(weight: Double)
         case monoSpacedDigit(size: Double, weight: Double)
     }
-    
+
     enum FontSize {
         case standard(StandardSize)
         case custom(Double)
@@ -30,13 +30,13 @@ struct Font {
             }
         }
     }
-    
+
     enum FontName: String {
         case GothamRegular = "SVN-Gotham"
         case GothamBold = "SVN-GothamBold"
         case GothamItalic = "SVN-GothamItalic"
     }
-    
+
     enum StandardSize: Double {
         case h1 = 20.0
         case h2 = 18.0
@@ -45,10 +45,10 @@ struct Font {
         case h5 = 12.0
         case h6 = 10.0
     }
-    
+
     var type: FontType
     var size: FontSize
-    
+
     init(_ type: FontType, size: FontSize) {
         self.type = type
         self.size = size

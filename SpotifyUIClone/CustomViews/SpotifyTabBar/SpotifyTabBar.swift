@@ -10,21 +10,21 @@ import UIKit
 class SpotifyTabBar: UIStackView {
     var itemTapped: ((_ tab: Int) -> Void)?
     var selectedItem: Int = 0
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     convenience init(menuItems: [TabItem], frame: CGRect) {
         self.init(frame: frame)
-        
+
         setup(menuItems: menuItems, frame: frame)
     }
-    
+
     private func setup(menuItems: [TabItem], frame: CGRect) {
         layer.backgroundColor = UIColor.white.cgColor
         axis = .horizontal
@@ -32,19 +32,19 @@ class SpotifyTabBar: UIStackView {
         clipsToBounds = true
         alignment = .fill
         distribution = .fillEqually
-        
+
         for index in 0 ..< menuItems.count {
             let itemView = createTabItem(tabItem: menuItems[index])
             itemView.tag = index
-            
+
             addArrangedSubview(itemView)
         }
-        
+
         setNeedsLayout()
         layoutIfNeeded()
         switchTab(to: 0)
     }
-    
+
     private func createTabItem(tabItem: TabItem) -> UIView {
         let spotifyTabBarItem = SpotifyTabBarItem.loadFromXib()
         spotifyTabBarItem.configure(tabItem: tabItem) { index in
@@ -57,7 +57,7 @@ class SpotifyTabBar: UIStackView {
         }
         return spotifyTabBarItem
     }
-    
+
     func switchTab(to: Int) {
         self.itemTapped?(to)
         self.selectedItem = to

@@ -11,9 +11,9 @@ enum TabItem: String, CaseIterable {
     case home = "home"
     case search = "search"
     case library = "library"
-    
+
     var viewController: UIViewController {
-        switch (self) {
+        switch self {
         case .home:
             return HomeViewController()
         case .search:
@@ -22,9 +22,9 @@ enum TabItem: String, CaseIterable {
             return LibraryViewController()
         }
     }
-    
+
     var icon: UIImage? {
-        switch (self) {
+        switch self {
         case .home:
             return UIImage(systemName: "house")
         case .search:
@@ -33,9 +33,9 @@ enum TabItem: String, CaseIterable {
             return UIImage(systemName: "folder")
         }
     }
-    
+
     var selectedIcon: UIImage? {
-        switch (self) {
+        switch self {
         case .home:
             return UIImage(systemName: "house.fill")
         case .search:
@@ -44,9 +44,9 @@ enum TabItem: String, CaseIterable {
             return UIImage(systemName: "folder.fill")
         }
     }
-    
+
     var title: String {
-        switch (self) {
+        switch self {
         case .home:
             return "Home"
         case .search:

@@ -12,32 +12,32 @@ class SpotifyTabBarItem: UIView {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var label: UILabel!
     private var onClick: ((Int?) -> Void)?
-    
+
     static func loadFromXib() -> SpotifyTabBarItem {
         SpotifyTabBarItem.load(nibName: "SpotifyTabBarItem")
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
         icon.isUserInteractionEnabled = true
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleClick)))
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+
     func configure(tabItem: TabItem, onClick: @escaping (Int?) -> Void) {
         icon.image = tabItem.icon
         label.text = tabItem.title
         self.onClick = onClick
     }
-    
+
     @objc func handleClick(gesture: UITapGestureRecognizer) {
         if gesture.state == .began {
             icon.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
