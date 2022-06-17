@@ -15,20 +15,20 @@ final class SpotifyButton: UIButton {
             self.setTitle(text, for: .normal)
         }
     }
-    
+
     @IBInspectable var textColor: UIColor = .black {
         didSet {
             buttonConfiguration.baseForegroundColor = textColor
         }
     }
-    
+
     @IBInspectable var color: UIColor = Colors.spotifyGreen {
         didSet {
             self.tintColor = color
         }
     }
-    
-    override init(frame: CGRect){
+
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-regular.otf">
+            <string>SVN-Gotham</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="home-item-cell" id="LbS-78-TYV" customClass="HomeItemArtistCollectionViewCell" customModule="SpotifyUIClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="285"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KGg-Le-Hoy">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="285"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0f-f8-X0Q">
+                        <rect key="frame" x="8" y="8" width="183" height="183"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="g0f-f8-X0Q" secondAttribute="height" multiplier="1:1" id="r7D-zX-bti"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-NX-brI">
+                        <rect key="frame" x="8" y="195" width="183" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="g0f-f8-X0Q" firstAttribute="top" secondItem="KGg-Le-Hoy" secondAttribute="top" constant="8" id="2zd-3P-g3g"/>
+                    <constraint firstItem="zrq-NX-brI" firstAttribute="leading" secondItem="KGg-Le-Hoy" secondAttribute="leading" constant="8" id="6Uf-1U-g7e"/>
+                    <constraint firstItem="g0f-f8-X0Q" firstAttribute="leading" secondItem="KGg-Le-Hoy" secondAttribute="leading" constant="8" id="O2l-32-JcA"/>
+                    <constraint firstItem="zrq-NX-brI" firstAttribute="top" secondItem="g0f-f8-X0Q" secondAttribute="bottom" constant="4" id="W4o-16-wBU"/>
+                    <constraint firstAttribute="trailing" secondItem="zrq-NX-brI" secondAttribute="trailing" constant="8" id="a1d-yB-23E"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zrq-NX-brI" secondAttribute="bottom" id="nQL-ed-RoZ"/>
+                    <constraint firstAttribute="trailing" secondItem="g0f-f8-X0Q" secondAttribute="trailing" constant="8" id="nYE-oE-g91"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="464" height="206"/>
+            <connections>
+                <outlet property="itemImage" destination="g0f-f8-X0Q" id="Cks-sk-8KF"/>
+                <outlet property="title" destination="zrq-NX-brI" id="dMl-Iv-2ou"/>
+            </connections>
+            <point key="canvasLocation" x="102.17391304347827" y="236.04910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
