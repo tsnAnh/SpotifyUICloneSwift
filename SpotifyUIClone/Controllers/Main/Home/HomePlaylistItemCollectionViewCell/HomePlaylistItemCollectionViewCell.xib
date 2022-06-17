@@ -32,16 +32,20 @@
                                     <constraint firstAttribute="width" secondItem="Jm2-kY-cVN" secondAttribute="height" multiplier="1:1" id="ajm-Gb-FDV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-G7-VXQ">
-                                <rect key="frame" x="0.0" y="237" width="229" height="22"/>
-                                <fontDescription key="fontDescription" name="SVN-GothamBold" family="SVN-Gotham" pointSize="16"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oXf-Cc-0af">
+                                <rect key="frame" x="10" y="10" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-G7-VXQ">
+                                <rect key="frame" x="0.0" y="233" width="229" height="16.5"/>
+                                <fontDescription key="fontDescription" name="SVN-GothamBold" family="SVN-Gotham" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="das  asd as das das das as dasd asd asd as das das dasd as das das das das das das" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-zX-aYQ">
-                                <rect key="frame" x="0.0" y="259" width="229" height="35"/>
-                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="249.5" width="229" height="32.5"/>
+                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -53,7 +57,7 @@
                             <constraint firstItem="Jm2-kY-cVN" firstAttribute="top" secondItem="DRX-dq-LtA" secondAttribute="top" id="Hhs-bi-RMv"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dAN-zX-aYQ" secondAttribute="bottom" id="JOU-c4-dX2"/>
                             <constraint firstItem="Jm2-kY-cVN" firstAttribute="leading" secondItem="DRX-dq-LtA" secondAttribute="leading" id="RIB-5R-sw7"/>
-                            <constraint firstItem="RlP-G7-VXQ" firstAttribute="top" secondItem="Jm2-kY-cVN" secondAttribute="bottom" constant="8" id="RXr-DU-meb"/>
+                            <constraint firstItem="RlP-G7-VXQ" firstAttribute="top" secondItem="Jm2-kY-cVN" secondAttribute="bottom" constant="4" id="RXr-DU-meb"/>
                             <constraint firstAttribute="trailing" secondItem="dAN-zX-aYQ" secondAttribute="trailing" id="WPx-P0-FMb"/>
                             <constraint firstItem="dAN-zX-aYQ" firstAttribute="leading" secondItem="DRX-dq-LtA" secondAttribute="leading" id="cYc-W1-6x7"/>
                             <constraint firstAttribute="trailing" secondItem="RlP-G7-VXQ" secondAttribute="trailing" id="dvn-IA-bgR"/>

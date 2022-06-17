@@ -18,7 +18,7 @@ struct HomeDataSource {
                 let recentlyListenListCell = tableView.dequeueReusableCell(withIdentifier: "recently-cell", for: indexPath) as! RecentlyListenListTableViewCell
                 recentlyListenListCell.bindData(recentlyListenItems: items)
                 return recentlyListenListCell
-            case let .ListenAgain(header, items):
+            case let .HomeSubListItem(header, items):
                 let homeSublistCell = tableView.dequeueReusableCell(withIdentifier: "home-sublist-cell", for: indexPath) as! HomeItemSublistTableViewCell
                 homeSublistCell.bindData(header, items)
                 return homeSublistCell

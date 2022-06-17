@@ -39,7 +39,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-n9-epj">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -66,7 +66,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN4-Ov-Ofg">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -101,7 +101,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2z3-Sh-E5h">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -128,7 +128,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axs-XG-OTD">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -163,7 +163,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VN-VT-VwD">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -190,7 +190,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlJ-f3-0Mc">
                                                 <rect key="frame" x="64" y="8" width="299.5" height="40"/>
-                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -215,7 +215,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2QB-cF-yUI" secondAttribute="bottom" id="8Ib-4s-aCB"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2QB-cF-yUI" secondAttribute="bottom" constant="16" id="8Ib-4s-aCB"/>
                     <constraint firstItem="2QB-cF-yUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="CYv-51-6Lc"/>
                     <constraint firstItem="2QB-cF-yUI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="i6a-7H-sbA"/>
                     <constraint firstAttribute="trailing" secondItem="2QB-cF-yUI" secondAttribute="trailing" constant="16" id="luZ-Uv-fi0"/>

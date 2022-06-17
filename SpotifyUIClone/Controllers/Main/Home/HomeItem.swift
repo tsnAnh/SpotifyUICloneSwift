@@ -5,5 +5,5 @@
 enum HomeItem {
     case Header
     case RecentlyListenList(items: [HomeItemUiModel])
-    case ListenAgain(header: String, items: [HomeItemUiModel])
+    case HomeSubListItem(header: String, items: [HomeItemUiModel])
 }

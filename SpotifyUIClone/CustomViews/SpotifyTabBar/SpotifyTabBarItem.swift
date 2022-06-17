@@ -21,6 +21,8 @@ class SpotifyTabBarItem: UIView {
         super.awakeFromNib()
 
         icon.isUserInteractionEnabled = true
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.borderColor = UIColor.clear.cgColor
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleClick)))
     }
 

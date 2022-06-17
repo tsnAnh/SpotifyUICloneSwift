@@ -8,26 +8,24 @@
 import UIKit
 import Kingfisher
 
-class HomeItemArtistCollectionViewCell: UICollectionViewCell {
+class HomeItemArtistCollectionViewCell: BaseHomeItemViewModel {
 
     @IBOutlet private weak var itemImage: UIImageView!
     @IBOutlet private weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        DispatchQueue.main.async {
-            self.itemImage.layer.cornerRadius = min(self.itemImage.frame.height, self.itemImage.frame.width) / 2
-            self.itemImage.clipsToBounds = true
-            self.itemImage.layoutIfNeeded()
-            self.contentView.layoutSubviews()
-            self.title.sizeToFit()
-        }
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        itemImage.clipsToBounds = true
     }
     
-    func bindData(item: HomeItemUiModel, isSizing: Bool = false) {
-        itemImage.kf.setImage(with: URL(string: item.imageUrl))
-        title.text = item.title
+    override func configure() {
+        itemImage.kf.setImage(with: URL(string: viewModel.imageUrl))
+        title.text = viewModel.title
+        self.itemImage.layoutIfNeeded()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.itemImage.layer.cornerRadius = min(self.itemImage.frame.height, self.itemImage.frame.width) / 2
     }
 }

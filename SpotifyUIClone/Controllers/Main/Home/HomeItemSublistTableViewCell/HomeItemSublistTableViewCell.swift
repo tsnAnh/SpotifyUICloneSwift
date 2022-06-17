@@ -50,7 +50,7 @@ extension HomeItemSublistTableViewCell: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let size = collectionView.frame.size.width / 2.3
+        let size = collectionView.frame.size.width / 2.5
         
         return CGSize(width: size, height: collectionView.frame.height)
     }

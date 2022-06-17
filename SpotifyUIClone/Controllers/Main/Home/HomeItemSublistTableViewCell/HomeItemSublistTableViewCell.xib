@@ -22,16 +22,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-lj-Fdo">
-                        <rect key="frame" x="16" y="8" width="304" height="30.5"/>
+                        <rect key="frame" x="16" y="0.0" width="304" height="30.5"/>
                         <fontDescription key="fontDescription" name="SVN-GothamBold" family="SVN-Gotham" pointSize="22"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV8-Gb-dSd">
-                        <rect key="frame" x="8" y="46.5" width="304" height="250"/>
+                        <rect key="frame" x="8" y="38.5" width="304" height="220"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="250" id="d7Z-hb-ASc"/>
+                            <constraint firstAttribute="height" constant="220" id="d7Z-hb-ASc"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nUs-jV-vYB">
                             <size key="itemSize" width="128" height="128"/>
@@ -46,7 +46,7 @@
                     <constraint firstAttribute="trailing" secondItem="NV8-Gb-dSd" secondAttribute="trailing" constant="8" id="Vaj-dz-NoP"/>
                     <constraint firstItem="NV8-Gb-dSd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="chn-r2-iCF"/>
                     <constraint firstItem="NV8-Gb-dSd" firstAttribute="top" secondItem="6UF-lj-Fdo" secondAttribute="bottom" constant="8" id="dC9-cR-2Jo"/>
-                    <constraint firstItem="6UF-lj-Fdo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eFY-ou-oFa"/>
+                    <constraint firstItem="6UF-lj-Fdo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eFY-ou-oFa"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NV8-Gb-dSd" secondAttribute="bottom" priority="999" id="hon-HY-nwM"/>
                     <constraint firstAttribute="trailing" secondItem="6UF-lj-Fdo" secondAttribute="trailing" id="hrp-Eu-ehW"/>
                     <constraint firstItem="6UF-lj-Fdo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jqN-HS-3hn"/>

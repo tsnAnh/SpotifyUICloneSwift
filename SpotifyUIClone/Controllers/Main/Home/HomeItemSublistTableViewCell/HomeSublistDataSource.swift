@@ -17,11 +17,13 @@ struct HomeSublistDataSource {
                 switch item.itemType {
                 case .Artist:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "home-item-cell", for: indexPath) as! HomeItemArtistCollectionViewCell
-                    cell.bindData(item: item)
+                    cell.viewModel = item
+                    cell.configure()
                     return cell
                 case .Playlist:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomePlaylistItemCollectionViewCell.self), for: indexPath) as! HomePlaylistItemCollectionViewCell
-                    cell.bindData(item: item)
+                    cell.viewModel = item
+                    cell.configure()
                     return cell
                 }
             }

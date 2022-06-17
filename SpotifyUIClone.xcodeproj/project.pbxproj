@@ -57,6 +57,7 @@
 		BBCEDCC92841DBAB00B368A0 /* RecentlyListenListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCEDCC72841DBAB00B368A0 /* RecentlyListenListTableViewCell.swift */; };
 		BBCEDCCA2841DBAB00B368A0 /* RecentlyListenListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBCEDCC82841DBAB00B368A0 /* RecentlyListenListTableViewCell.xib */; };
 		BBCEDCCD2842216D00B368A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BBCEDCCC2842216D00B368A0 /* Kingfisher */; };
+		BBDDC6C1285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDDC6C0285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift */; };
 		BBE484DE282BFAD2006FA93D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DD282BFAD2006FA93D /* BaseViewController.swift */; };
 		BBE484E0282BFB5F006FA93D /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */; };
 		CC7A35CFA50EDCC3E0C75EEA /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A3A89F151762633EA30FA /* HomeSection.swift */; };
@@ -111,6 +112,7 @@
 		BBC56983281EFC89007D1A0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BBCEDCC72841DBAB00B368A0 /* RecentlyListenListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyListenListTableViewCell.swift; sourceTree = "<group>"; };
 		BBCEDCC82841DBAB00B368A0 /* RecentlyListenListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentlyListenListTableViewCell.xib; sourceTree = "<group>"; };
+		BBDDC6C0285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBE484DD282BFAD2006FA93D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		CC7A30722D91C51F4BA8F42F /* HomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
@@ -349,6 +351,14 @@
 			path = RecentlyListenListTableViewCell;
 			sourceTree = "<group>";
 		};
+		BBDDC6BF285CC878003B9886 /* BaseHomeItemCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BBDDC6C0285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift */,
+			);
+			path = BaseHomeItemCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		BBE484DC282BFABF006FA93D /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +388,7 @@
 		CC7A3FA8991DD1048FDDDAC9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BBDDC6BF285CC878003B9886 /* BaseHomeItemCollectionViewCell */,
 				BBAF7D4628491E7200BD55A7 /* HomePlaylistItemCollectionViewCell */,
 				BBA2F803284284F600473E8E /* HomeArtistItemTableViewCell */,
 				BBA2F7FB28427D7C00473E8E /* HomeItemSublistTableViewCell */,
@@ -509,6 +520,7 @@
 				BB0F7515281C3FE500C2F80C /* Uitilities.swift in Sources */,
 				BBA2F8062842855400473E8E /* HomeItemArtistCollectionViewCell.swift in Sources */,
 				BB4E0E5D28197E7500DD56B7 /* AppDelegate.swift in Sources */,
+				BBDDC6C1285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift in Sources */,
 				BBAF7D522849266E00BD55A7 /* HomeSublistItems.swift in Sources */,
 				BB8E9B7E2827B90500799943 /* UINavigationControllerExtensions.swift in Sources */,
 				BB95F1C82830FCF500BC0A93 /* SpotifyTabBarItem.swift in Sources */,
@@ -670,6 +682,7 @@
 				INFOPLIST_KEY_NSMainNibFile = AuthenticationViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -699,6 +712,7 @@
 				INFOPLIST_KEY_NSMainNibFile = AuthenticationViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -26,7 +26,7 @@ class SpotifyTabBar: UIStackView {
     }
 
     private func setup(menuItems: [TabItem], frame: CGRect) {
-        layer.backgroundColor = UIColor.white.cgColor
+        layer.backgroundColor = UIColor.clear.cgColor
         axis = .horizontal
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
