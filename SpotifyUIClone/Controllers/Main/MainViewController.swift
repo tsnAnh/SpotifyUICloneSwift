@@ -6,18 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UITabBarController {
     private var spotifyTabBar: SpotifyTabBar!
-    private let tabBarHeight: CGFloat = 64
 
-    let homeViewController = HomeViewController()
-    let searchViewController = SearchViewController()
-    let libraryViewController = LibraryViewController()
+    private let homeViewController = HomeViewController()
+    private let searchViewController = SearchViewController()
+    private let libraryViewController = LibraryViewController()
 
-    var homeNavigation: UINavigationController!
-    var searchNavigation: UINavigationController!
-    var libraryNavigation: UINavigationController!
+    private var homeNavigation: UINavigationController!
+    private var searchNavigation: UINavigationController!
+    private var libraryNavigation: UINavigationController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,17 +43,16 @@ class MainViewController: UITabBarController {
         spotifyTabBar = SpotifyTabBar(menuItems: tabItems, frame: .zero)
         spotifyTabBar.clipsToBounds = true
         spotifyTabBar.itemTapped = changeTab(index:)
-        spotifyTabBar.layer.zPosition = 1
         tabBar.addSubview(spotifyTabBar)
         tabBar.backgroundImage = UIImage()
         tabBar.layer.borderColor = UIColor.clear.cgColor
         tabBar.shadowImage = UIImage()
         
-        NSLayoutConstraint.activate([
-            spotifyTabBar.topAnchor.constraint(equalTo: self.tabBar.topAnchor, constant: 0),
-            spotifyTabBar.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
-            spotifyTabBar.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
-        ])
+        spotifyTabBar.snp.makeConstraints { (make) -> Void in
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
         
         tabItems.forEach {
             controllers.append($0.viewController)
@@ -63,11 +62,12 @@ class MainViewController: UITabBarController {
         selectedIndex = 0
     }
 
-    func changeTab(index: Int) {
+    fileprivate func changeTab(index: Int) {
         self.selectedIndex = index
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         let tabBarGradientView = UIView()
         tabBarGradientView.translatesAutoresizingMaskIntoConstraints = false
         tabBarGradientView.clipsToBounds = false
@@ -80,7 +80,6 @@ class MainViewController: UITabBarController {
         gradientLayer.frame = tabBar.bounds
         gradientLayer.locations = [0, 1]
         tabBarGradientView.layer.insertSublayer(gradientLayer, at: 0)
-        tabBarGradientView.layer.zPosition = 0
         
         tabBar.addSubview(tabBarGradientView)
         tabBar.sendSubviewToBack(tabBarGradientView)
@@ -91,5 +90,11 @@ class MainViewController: UITabBarController {
             tabBarGradientView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             tabBarGradientView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
         ])
+        tabBarGradientView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
     }
 }
