@@ -12,6 +12,7 @@
 		BB0F752D281C520F00C2F80C /* gotham-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB0F7529281C520F00C2F80C /* gotham-bold.otf */; };
 		BB0F752E281C520F00C2F80C /* gotham-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB0F752A281C520F00C2F80C /* gotham-italic.otf */; };
 		BB0F752F281C520F00C2F80C /* gotham-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB0F752B281C520F00C2F80C /* gotham-regular.otf */; };
+		BB4D720D285D88C7006A43DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB4D720C285D88C7006A43DD /* SnapKit */; };
 		BB4E0E5D28197E7500DD56B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E0E5C28197E7500DD56B7 /* AppDelegate.swift */; };
 		BB4E0E5F28197E7500DD56B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E0E5E28197E7500DD56B7 /* SceneDelegate.swift */; };
 		BB4E0E6628197E7700DD56B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4E0E6528197E7700DD56B7 /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC5697D281EFB4D007D1A0D /* RxRelay in Frameworks */,
+				BB4D720D285D88C7006A43DD /* SnapKit in Frameworks */,
 				BBBD7E0E283FC2870065498A /* Differentiator in Frameworks */,
 				BBCEDCCD2842216D00B368A0 /* Kingfisher in Frameworks */,
 				BBC5697B281EFB4D007D1A0D /* RxCocoa in Frameworks */,
@@ -428,6 +430,7 @@
 				BBBD7E0D283FC2870065498A /* Differentiator */,
 				BBBD7E0F283FC2870065498A /* RxDataSources */,
 				BBCEDCCC2842216D00B368A0 /* Kingfisher */,
+				BB4D720C285D88C7006A43DD /* SnapKit */,
 			);
 			productName = SpotifyUIClone;
 			productReference = BB4E0E5928197E7500DD56B7 /* SpotifyUIClone.app */;
@@ -461,6 +464,7 @@
 				BBC56977281EFB4D007D1A0D /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BBBD7E0C283FC2870065498A /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				BBCEDCCB2842216D00B368A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BB4D720B285D88C7006A43DD /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BB4E0E5A28197E7500DD56B7 /* Products */;
 			projectDirPath = "";
@@ -752,6 +756,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB4D720B285D88C7006A43DD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		BBBD7E0C283FC2870065498A /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
@@ -779,6 +791,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB4D720C285D88C7006A43DD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB4D720B285D88C7006A43DD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		BBBD7E0D283FC2870065498A /* Differentiator */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBBD7E0C283FC2870065498A /* XCRemoteSwiftPackageReference "RxDataSources" */;
