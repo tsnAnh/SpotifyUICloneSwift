@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-bold.otf">
+            <string>SVN-GothamBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="319" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell" customModule="SpotifyUIClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="566" height="319"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="566" height="319"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYo-08-ZvA">
+                        <rect key="frame" x="16" y="8" width="518" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SVN-GothamBold" family="SVN-Gotham" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-I0-PyX" customClass="DynamicHeightCollectionView" customModule="SpotifyUIClone" customModuleProvider="target">
+                        <rect key="frame" x="16" y="28" width="534" height="283"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ehe-y6-uPj">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bYo-08-ZvA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="D7s-oH-7Kn"/>
+                    <constraint firstAttribute="bottom" secondItem="ECw-I0-PyX" secondAttribute="bottom" constant="8" id="Dhb-gc-Jwn"/>
+                    <constraint firstAttribute="trailing" secondItem="ECw-I0-PyX" secondAttribute="trailing" constant="16" id="lWC-Jb-cSM"/>
+                    <constraint firstItem="ECw-I0-PyX" firstAttribute="top" secondItem="bYo-08-ZvA" secondAttribute="bottom" constant="20" id="oUc-4f-kp7"/>
+                    <constraint firstItem="ECw-I0-PyX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pNT-oB-ZjN"/>
+                    <constraint firstItem="bYo-08-ZvA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sdS-bi-JJW"/>
+                    <constraint firstAttribute="trailing" secondItem="bYo-08-ZvA" secondAttribute="trailing" constant="32" id="wJb-n0-fCP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="ECw-I0-PyX" id="cOS-DS-cbh"/>
+                <outlet property="headerLabel" destination="bYo-08-ZvA" id="lsv-5n-l5A"/>
+            </connections>
+            <point key="canvasLocation" x="310.14492753623193" y="193.86160714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

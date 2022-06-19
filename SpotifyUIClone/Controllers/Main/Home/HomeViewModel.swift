@@ -7,7 +7,7 @@
 
 import RxSwift
 
-struct HomeViewModel {
+final class HomeViewModel: BaseViewModel {
 
     let items = BehaviorSubject<[HomeSection]>(
             value: [

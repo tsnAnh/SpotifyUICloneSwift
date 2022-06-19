@@ -17,8 +17,8 @@ final class HomeViewController: BaseViewController {
     private var disposeBag = DisposeBag()
 
     private let homeToolbarCell = HomeHeaderTableViewCell()
-
-    private let viewModel = HomeViewModel()
+   
+    private var viewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
