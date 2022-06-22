@@ -14,6 +14,10 @@ class CategoriesTableViewCell: UITableViewCell {
     @IBOutlet private weak var headerLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    static func cellIdentifier() -> String {
+        String(describing: Self.self)
+    }
+    
     private var disposeBag = DisposeBag()
     
     var viewModel: CategoriesTableViewCellViewModel! {
@@ -40,9 +44,9 @@ class CategoriesTableViewCell: UITableViewCell {
     private func createCollectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2 - 20, height: 100)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2 - 22, height: 100)
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 8
+        layout.minimumLineSpacing = 12
         return layout
     }
     

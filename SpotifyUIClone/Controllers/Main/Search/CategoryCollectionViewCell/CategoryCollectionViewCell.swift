@@ -29,14 +29,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.contentView.layer.cornerRadius = 8
         self.contentView.layer.backgroundColor = getRandomColor().cgColor
-        self.categoryImage.layer.masksToBounds = true
     }
     
     private func configureCell() {
         categoryName.text = viewModel.categoryName
         categoryImage.kf.setImage(with: URL(string: viewModel.imageUrl))
         categoryImage.transform = categoryImage.transform.rotated(by: Double.pi / 6)
-        categoryImage.transform = categoryImage.transform.translatedBy(x: 8, y: 8)
+        categoryImage.transform = categoryImage.transform.translatedBy(x: 8, y: 12)
         categoryImage.transform = categoryImage.transform.scaledBy(x: 0.8, y: 0.8)
     }
     

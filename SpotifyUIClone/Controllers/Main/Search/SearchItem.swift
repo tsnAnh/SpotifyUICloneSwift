@@ -8,5 +8,6 @@
 import RxDataSources
 
 enum SearchItem {
+    case Header
     case Categories(header: String, categories: [CategoryItemViewModel])
 }

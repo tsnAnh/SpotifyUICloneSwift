@@ -8,6 +8,7 @@
 import RxDataSources
 
 enum SearchSection {
+    case SearchHeader(items: [SearchItem])
     case CategoriesSection(items: [SearchItem])
 }
 
@@ -16,7 +17,9 @@ extension SearchSection: SectionModelType {
     
     var items: [SearchItem] {
         switch self {
-        case .CategoriesSection(items: let items):
+        case .SearchHeader(let items):
+            return items
+        case .CategoriesSection(let items):
             return items
         }
     }

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AuthenticationViewController: UIViewController {
+class AuthenticationViewController: BaseViewController {
 
     private var disposeBag = DisposeBag()
 
