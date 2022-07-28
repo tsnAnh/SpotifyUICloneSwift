@@ -27,8 +27,8 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-I0-PyX" customClass="DynamicHeightCollectionView" customModule="SpotifyUIClone" customModuleProvider="target">
-                        <rect key="frame" x="16" y="28" width="534" height="283"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-I0-PyX" customClass="DynamicHeightCollectionView" customModule="SpotifyUIClone" customModuleProvider="target">
+                        <rect key="frame" x="16" y="28" width="534" height="275"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ehe-y6-uPj">
                             <size key="itemSize" width="128" height="128"/>
@@ -40,7 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="bYo-08-ZvA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="D7s-oH-7Kn"/>
-                    <constraint firstAttribute="bottom" secondItem="ECw-I0-PyX" secondAttribute="bottom" constant="8" id="Dhb-gc-Jwn"/>
+                    <constraint firstAttribute="bottom" secondItem="ECw-I0-PyX" secondAttribute="bottom" priority="750" constant="16" id="Dhb-gc-Jwn"/>
                     <constraint firstAttribute="trailing" secondItem="ECw-I0-PyX" secondAttribute="trailing" constant="16" id="lWC-Jb-cSM"/>
                     <constraint firstItem="ECw-I0-PyX" firstAttribute="top" secondItem="bYo-08-ZvA" secondAttribute="bottom" constant="20" id="oUc-4f-kp7"/>
                     <constraint firstItem="ECw-I0-PyX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pNT-oB-ZjN"/>

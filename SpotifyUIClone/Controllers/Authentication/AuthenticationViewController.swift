@@ -11,8 +11,6 @@ import RxCocoa
 
 class AuthenticationViewController: BaseViewController {
 
-    private var disposeBag = DisposeBag()
-
     @IBOutlet weak var btnLogin: SpotifyButton!
 
     fileprivate func setupButton() {

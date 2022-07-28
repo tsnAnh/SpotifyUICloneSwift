@@ -8,8 +8,16 @@
 import UIKit
 
 class LibraryViewController: BaseViewController {
+    
+    @IBOutlet private weak var libraryTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        libraryTableView.register(LibraryHeaderTableViewCell.self)
     }
 }

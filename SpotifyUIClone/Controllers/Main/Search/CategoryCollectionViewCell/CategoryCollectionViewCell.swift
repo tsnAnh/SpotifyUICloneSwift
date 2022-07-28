@@ -20,7 +20,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     var viewModel: CategoryItemViewModel! {
         didSet {
             configureCell()
-            setNeedsLayout()
+            layoutIfNeeded()
         }
     }
 

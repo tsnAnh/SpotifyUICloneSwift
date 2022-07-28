@@ -14,8 +14,6 @@ final class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var homeList: UITableView!
 
-    private var disposeBag = DisposeBag()
-
     private let homeToolbarCell = HomeHeaderTableViewCell()
    
     private var viewModel = HomeViewModel()

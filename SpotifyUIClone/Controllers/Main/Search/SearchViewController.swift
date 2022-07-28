@@ -16,8 +16,6 @@ class SearchViewController: BaseViewController {
     
     private var viewModel = SearchViewModel()
     
-    private var disposeBag = DisposeBag()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,9 +35,6 @@ class SearchViewController: BaseViewController {
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.contentInsetAdjustmentBehavior = .never
-        if #available(iOS 15.0, *) {
-          tableView.sectionHeaderTopPadding = 4
-        }
     }
     
     private func observeData() {
@@ -57,9 +52,9 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if (section == 1) {
             let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SpotifySearchBox") as! SpotifySearchBox
-            cell.viewModel = SpotifySearchBoxViewModel(onClick: { [weak self] in
-                self?.navigationController?.pushViewController(HomeViewController(), animated: false)
-            })
+            cell.viewModel = SpotifySearchBoxViewModel { [weak self] in
+                self?.navigationController?.pushViewController(SearchAndHistoryViewController(), animated: false)
+            }
             return cell
         }
         
@@ -67,10 +62,14 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 1 ? 72 : 0
+        return section == 1 ? 64 : .leastNormalMagnitude
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        0
+        .leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
 }
