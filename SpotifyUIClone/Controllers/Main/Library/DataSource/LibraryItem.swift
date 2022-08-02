@@ -6,5 +6,5 @@
 //
 
 enum LibraryItem {
-    case Header
+    case LibraryList
 }

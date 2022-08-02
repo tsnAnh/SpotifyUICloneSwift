@@ -11,7 +11,8 @@ protocol NibLoading {}
 
 extension NibLoading where Self: UIView {
     static func load(nibName: String) -> Self {
-        let nib = UINib(nibName: nibName, bundle: nil)
+        let bundle = Bundle(for: Self.self)
+        let nib = UINib(nibName: nibName, bundle: bundle)
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? Self else {
             fatalError("Error instantiate view")
         }

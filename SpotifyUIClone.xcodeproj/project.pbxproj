@@ -53,6 +53,12 @@
 		BB95F1C82830FCF500BC0A93 /* SpotifyTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F1C72830FCF500BC0A93 /* SpotifyTabBarItem.swift */; };
 		BB95F1CC2830FFF800BC0A93 /* NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F1CB2830FFF800BC0A93 /* NibLoading.swift */; };
 		BB95F1CE28310A4800BC0A93 /* SpotifyTabBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB95F1CD28310A4800BC0A93 /* SpotifyTabBarItem.xib */; };
+		BBA219E1289962DA0017B81B /* LibraryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219DF289962DA0017B81B /* LibraryListTableViewCell.swift */; };
+		BBA219E2289962DA0017B81B /* LibraryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA219E0289962DA0017B81B /* LibraryListTableViewCell.xib */; };
+		BBA219E52899873F0017B81B /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219E42899873F0017B81B /* Chip.swift */; };
+		BBA219E928998D150017B81B /* LibraryTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219E728998D150017B81B /* LibraryTypeCollectionViewCell.swift */; };
+		BBA219EA28998D150017B81B /* LibraryTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA219E828998D150017B81B /* LibraryTypeCollectionViewCell.xib */; };
+		BBA219EC28998E710017B81B /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219EB28998E710017B81B /* UICollectionViewExtensions.swift */; };
 		BBA2F7FE28427E0E00473E8E /* HomeItemSublistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2F7FC28427E0E00473E8E /* HomeItemSublistTableViewCell.swift */; };
 		BBA2F7FF28427E0E00473E8E /* HomeItemSublistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA2F7FD28427E0E00473E8E /* HomeItemSublistTableViewCell.xib */; };
 		BBA2F802284280BC00473E8E /* HomeItemUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2F801284280BC00473E8E /* HomeItemUiModel.swift */; };
@@ -87,8 +93,6 @@
 		BBDDC6C1285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDDC6C0285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift */; };
 		BBE484DE282BFAD2006FA93D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DD282BFAD2006FA93D /* BaseViewController.swift */; };
 		BBE484E0282BFB5F006FA93D /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */; };
-		BBEAA15228919AD2001DE037 /* LibraryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAA15028919AD2001DE037 /* LibraryHeaderView.swift */; };
-		BBEAA15328919AD2001DE037 /* LibraryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBEAA15128919AD2001DE037 /* LibraryHeaderView.xib */; };
 		BBEAA15528919BC0001DE037 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAA15428919BC0001DE037 /* UITableViewExtensions.swift */; };
 		CC7A35CFA50EDCC3E0C75EEA /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A3A89F151762633EA30FA /* HomeSection.swift */; };
 		CC7A38210D97EA7C85B0C8D1 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A34EA046A2E8A8C85F364 /* HomeDataSource.swift */; };
@@ -143,6 +147,12 @@
 		BB95F1C72830FCF500BC0A93 /* SpotifyTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTabBarItem.swift; sourceTree = "<group>"; };
 		BB95F1CB2830FFF800BC0A93 /* NibLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoading.swift; sourceTree = "<group>"; };
 		BB95F1CD28310A4800BC0A93 /* SpotifyTabBarItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotifyTabBarItem.xib; sourceTree = "<group>"; };
+		BBA219DF289962DA0017B81B /* LibraryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryListTableViewCell.swift; sourceTree = "<group>"; };
+		BBA219E0289962DA0017B81B /* LibraryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryListTableViewCell.xib; sourceTree = "<group>"; };
+		BBA219E42899873F0017B81B /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		BBA219E728998D150017B81B /* LibraryTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BBA219E828998D150017B81B /* LibraryTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		BBA219EB28998E710017B81B /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		BBA2F7FC28427E0E00473E8E /* HomeItemSublistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemSublistTableViewCell.swift; sourceTree = "<group>"; };
 		BBA2F7FD28427E0E00473E8E /* HomeItemSublistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemSublistTableViewCell.xib; sourceTree = "<group>"; };
 		BBA2F801284280BC00473E8E /* HomeItemUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemUiModel.swift; sourceTree = "<group>"; };
@@ -171,8 +181,6 @@
 		BBDDC6C0285CC8AA003B9886 /* BaseHomeItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBE484DD282BFAD2006FA93D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		BBEAA15028919AD2001DE037 /* LibraryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryHeaderView.swift; sourceTree = "<group>"; };
-		BBEAA15128919AD2001DE037 /* LibraryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryHeaderView.xib; sourceTree = "<group>"; };
 		BBEAA15428919BC0001DE037 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		CC7A30722D91C51F4BA8F42F /* HomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 		CC7A34EA046A2E8A8C85F364 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
@@ -311,6 +319,7 @@
 		BB4E0E782819847200DD56B7 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				BBA219E32899871C0017B81B /* Chip */,
 				BB95F1BE2830D54400BC0A93 /* SpotifyTabBar */,
 				BB4E0E792819849A00DD56B7 /* SpotifyButton.swift */,
 				BB4D7226285EC53F006A43DD /* DynamicHeightCollectionView.swift */,
@@ -355,6 +364,7 @@
 				BB8E9B7D2827B90500799943 /* UINavigationControllerExtensions.swift */,
 				BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */,
 				BBEAA15428919BC0001DE037 /* UITableViewExtensions.swift */,
+				BBA219EB28998E710017B81B /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,6 +378,32 @@
 				BB95F1CD28310A4800BC0A93 /* SpotifyTabBarItem.xib */,
 			);
 			path = SpotifyTabBar;
+			sourceTree = "<group>";
+		};
+		BBA219DE289962AF0017B81B /* LibraryListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BBA219DF289962DA0017B81B /* LibraryListTableViewCell.swift */,
+				BBA219E0289962DA0017B81B /* LibraryListTableViewCell.xib */,
+			);
+			path = LibraryListTableViewCell;
+			sourceTree = "<group>";
+		};
+		BBA219E32899871C0017B81B /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				BBA219E42899873F0017B81B /* Chip.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		BBA219E628998CB10017B81B /* LibraryTypeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BBA219E728998D150017B81B /* LibraryTypeCollectionViewCell.swift */,
+				BBA219E828998D150017B81B /* LibraryTypeCollectionViewCell.xib */,
+			);
+			path = LibraryTypeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		BBA2F7FB28427D7C00473E8E /* HomeItemSublistTableViewCell */ = {
@@ -492,15 +528,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		BBEAA14F28919947001DE037 /* LibraryHeaderTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BBEAA15028919AD2001DE037 /* LibraryHeaderView.swift */,
-				BBEAA15128919AD2001DE037 /* LibraryHeaderView.xib */,
-			);
-			path = LibraryHeaderTableViewCell;
-			sourceTree = "<group>";
-		};
 		CC7A3A4F71BCEC4C8C889726 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,8 +548,9 @@
 		CC7A3DA4E6345026704FA7DE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				BBA219E628998CB10017B81B /* LibraryTypeCollectionViewCell */,
+				BBA219DE289962AF0017B81B /* LibraryListTableViewCell */,
 				BB6B5A3E2897F5F200E84DB3 /* DataSource */,
-				BBEAA14F28919947001DE037 /* LibraryHeaderTableViewCell */,
 				BB8E9B782827AE3100799943 /* LibraryViewController.swift */,
 				BB8E9B792827AE3100799943 /* LibraryViewController.xib */,
 				BB6B5A472897F93A00E84DB3 /* LibraryViewModel.swift */,
@@ -631,15 +659,16 @@
 				BB0F752F281C520F00C2F80C /* gotham-regular.otf in Resources */,
 				BB4D721F285E3C81006A43DD /* CategoryCollectionViewCell.xib in Resources */,
 				BB0F752E281C520F00C2F80C /* gotham-italic.otf in Resources */,
+				BBA219EA28998D150017B81B /* LibraryTypeCollectionViewCell.xib in Resources */,
 				BBDD38A72860C84900D18724 /* SearchHeaderTableViewCell.xib in Resources */,
 				BB4E0E6628197E7700DD56B7 /* Assets.xcassets in Resources */,
 				BBD736A72866CE4A00E9EF38 /* SearchItemTableViewCell.xib in Resources */,
-				BBEAA15328919AD2001DE037 /* LibraryHeaderView.xib in Resources */,
 				BBDD38AB2860D1C500D18724 /* SpotifySearchBox.xib in Resources */,
 				BBAF7D4A28491E9B00BD55A7 /* HomePlaylistItemCollectionViewCell.xib in Resources */,
 				BB4D7218285E32F0006A43DD /* CategoriesTableViewCell.xib in Resources */,
 				BB8E9B772827AAF800799943 /* SearchViewController.xib in Resources */,
 				BBCEDCCA2841DBAB00B368A0 /* RecentlyListenListTableViewCell.xib in Resources */,
+				BBA219E2289962DA0017B81B /* LibraryListTableViewCell.xib in Resources */,
 				BB8E9B7B2827AE3100799943 /* LibraryViewController.xib in Resources */,
 				BB95F1CE28310A4800BC0A93 /* SpotifyTabBarItem.xib in Resources */,
 				BB8E9B6F2827AA2B00799943 /* MainViewController.xib in Resources */,
@@ -656,11 +685,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA219EC28998E710017B81B /* UICollectionViewExtensions.swift in Sources */,
 				BBE484DE282BFAD2006FA93D /* BaseViewController.swift in Sources */,
 				BB6B5A422897F70900E84DB3 /* LibrarySection.swift in Sources */,
 				BB4D721A285E3364006A43DD /* CategoryItemViewModel.swift in Sources */,
 				BBBD7E14283FC7D10065498A /* HomeHeaderTableViewCell.swift in Sources */,
 				BBE484E0282BFB5F006FA93D /* UIColorExtensions.swift in Sources */,
+				BBA219E1289962DA0017B81B /* LibraryListTableViewCell.swift in Sources */,
 				BB78D32D2864B511008CCFDF /* SearchAndHistoryViewController.swift in Sources */,
 				BB95F1CC2830FFF800BC0A93 /* NibLoading.swift in Sources */,
 				BBCEDCC92841DBAB00B368A0 /* RecentlyListenListTableViewCell.swift in Sources */,
@@ -684,7 +715,6 @@
 				BB4D7227285EC53F006A43DD /* DynamicHeightCollectionView.swift in Sources */,
 				BB4D7211285E2549006A43DD /* SearchViewModel.swift in Sources */,
 				BB6B5A402897F64700E84DB3 /* LibraryItem.swift in Sources */,
-				BBEAA15228919AD2001DE037 /* LibraryHeaderView.swift in Sources */,
 				BBEAA15528919BC0001DE037 /* UITableViewExtensions.swift in Sources */,
 				BBAF7D4928491E9B00BD55A7 /* HomePlaylistItemCollectionViewCell.swift in Sources */,
 				BB0F7515281C3FE500C2F80C /* Uitilities.swift in Sources */,
@@ -697,11 +727,13 @@
 				BB4D7225285E4783006A43DD /* SearchDataSource.swift in Sources */,
 				BB8E9B722827AACE00799943 /* HomeViewController.swift in Sources */,
 				BB4E0E7A2819849A00DD56B7 /* SpotifyButton.swift in Sources */,
+				BBA219E52899873F0017B81B /* Chip.swift in Sources */,
 				BBA2F7FE28427E0E00473E8E /* HomeItemSublistTableViewCell.swift in Sources */,
 				BB4E0E5F28197E7500DD56B7 /* SceneDelegate.swift in Sources */,
 				BBDD38A92860D1B600D18724 /* SpotifySearchBox.swift in Sources */,
 				BB95F1C22830D75600BC0A93 /* TabItem.swift in Sources */,
 				BBAF7D50284923CF00BD55A7 /* HomeSublistSections.swift in Sources */,
+				BBA219E928998D150017B81B /* LibraryTypeCollectionViewCell.swift in Sources */,
 				BB4D7217285E32F0006A43DD /* CategoriesTableViewCell.swift in Sources */,
 				BB4D7223285E4699006A43DD /* SearchSection.swift in Sources */,
 				BB8E9B6E2827AA2B00799943 /* MainViewController.swift in Sources */,

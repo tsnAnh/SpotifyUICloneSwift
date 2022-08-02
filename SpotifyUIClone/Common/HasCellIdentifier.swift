@@ -8,3 +8,9 @@
 protocol HasCellIdentifier {
     static func cellIdentifier() -> String
 }
+
+extension HasCellIdentifier {
+    static func cellIdentifier() -> String {
+        return String(describing: Self.self)
+    }
+}

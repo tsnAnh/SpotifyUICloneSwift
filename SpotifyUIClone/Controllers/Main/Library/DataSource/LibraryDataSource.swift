@@ -7,16 +7,16 @@
 
 import RxDataSources
 
-//struct LibraryDataSource {
-//    static func dataSource() -> RxTableViewSectionedReloadDataSource<LibrarySection> {
-//        return .init { _, tableView, indexPath, item in
-//            switch item {
-//            case .Header:
-//                let cell = tableView.dequeueReusableCell(
-//                    withIdentifier: LibraryHeaderTableViewCell.cellIdentifier(),
-//                    for: indexPath) as! LibraryHeaderTableViewCell
-//                return cell
-//            }
-//        }
-//    }
-//}
+struct LibraryDataSource {
+    static func dataSource() -> RxTableViewSectionedReloadDataSource<LibrarySection> {
+        return .init { _, tableView, indexPath, item in
+            switch item {
+            case .LibraryList:
+                let cell = tableView.dequeueReusableCell(
+                    withIdentifier: LibraryListTableViewCell.cellIdentifier(),
+                    for: indexPath) as! LibraryListTableViewCell
+                return cell
+            }
+        }
+    }
+}
