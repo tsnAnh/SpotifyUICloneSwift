@@ -21,7 +21,7 @@ class LibraryViewController: BaseViewController {
     
     private let viewModel = LibraryViewModel()
     
-    private let types = ["Danh sách phát", "Nghệ sĩ", "Album", "Podcast và chương trình", "VCL", "DKM VCL"]
+    private let types = ["Danh sách phát", "Nghệ sĩ", "Album", "Podcast và chương trình"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,9 @@ class LibraryViewController: BaseViewController {
         libraryTypeCollectionView.allowsSelection = false
         libraryTypeCollectionView.register(LibraryTypeCollectionViewCell.self)
         libraryTypeCollectionView.delegate = self
+        libraryTypeCollectionView.contentInsetAdjustmentBehavior = .never
+        libraryTypeCollectionView.showsHorizontalScrollIndicator = false
+        libraryTypeCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     private func observeData() {
@@ -66,10 +69,30 @@ class LibraryViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         Observable.of(types)
-            .bind(to: libraryTypeCollectionView.rx.items(cellIdentifier: LibraryTypeCollectionViewCell.cellIdentifier(), cellType: LibraryTypeCollectionViewCell.self)) { index, type, cell in
+            .bind(to: libraryTypeCollectionView.rx.items(
+                cellIdentifier: LibraryTypeCollectionViewCell.cellIdentifier(),
+                cellType: LibraryTypeCollectionViewCell.self)
+            ) { index, type, cell in
                 cell.text = type
             }
             .disposed(by: disposeBag)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        libraryTypeCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = BottomSheetViewController()
+        let bottomSheetView = ContentTypeBottomSheetView.loadFromXib()
+        bottomSheetView.onCancelClick = {
+            vc.dismiss()
+        }
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.containerView = bottomSheetView
+        let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate
+        sceneDelegate?.navigationController.present(vc, animated: false)
     }
 }
 
@@ -77,16 +100,18 @@ extension LibraryViewController: UITableViewDelegate, UICollectionViewDelegateFl
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.libraryTableView {
             if (scrollView.contentOffset.y < 0)  {
-                //Scrolling up, scrolled to top
-                UIView.animate(withDuration: 0.2) {
+                // Scrolling up, scrolled to top
+                UIView.animate(withDuration: 0.1) {
                     self.typeCollectionViewHeight.constant = 48.0
                     self.libraryTypeCollectionView.layer.opacity = 1
+                    self.libraryTypeCollectionView.transform = CGAffineTransform(translationX: 0, y: 0)
                     self.view.layoutIfNeeded()
                 }
             } else if scrollView.contentOffset.y > 0 {
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     self.typeCollectionViewHeight.constant = 0.0
                     self.libraryTypeCollectionView.layer.opacity = 0
+                    self.libraryTypeCollectionView.transform = CGAffineTransform(translationX: 0, y: -16)
                     self.view.layoutIfNeeded()
                 }
             }
@@ -97,14 +122,14 @@ extension LibraryViewController: UITableViewDelegate, UICollectionViewDelegateFl
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let cell: LibraryTypeCollectionViewCell = Bundle.main.loadNibNamed(LibraryTypeCollectionViewCell.cellIdentifier(),
-                                                                      owner: self,
-                                                                      options: nil)?.first as? LibraryTypeCollectionViewCell else {
+                                                                                 owner: self,
+                                                                                 options: nil)?.first as? LibraryTypeCollectionViewCell else {
             return CGSize.zero
         }
         cell.text = types[indexPath.row]
         cell.setNeedsLayout()
         cell.layoutIfNeeded()
         let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-        return CGSize(width: size.width, height: collectionView.frame.height - 4)
+        return CGSize(width: size.width, height: collectionView.frame.height)
     }
 }

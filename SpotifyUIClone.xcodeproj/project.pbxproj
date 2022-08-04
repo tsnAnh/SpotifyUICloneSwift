@@ -94,6 +94,11 @@
 		BBE484DE282BFAD2006FA93D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DD282BFAD2006FA93D /* BaseViewController.swift */; };
 		BBE484E0282BFB5F006FA93D /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */; };
 		BBEAA15528919BC0001DE037 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEAA15428919BC0001DE037 /* UITableViewExtensions.swift */; };
+		BBF2D913289C07570014A8D2 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2D912289C07570014A8D2 /* BottomSheetViewController.swift */; };
+		BBF2D916289C10800014A8D2 /* ContentTypeBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2D915289C10800014A8D2 /* ContentTypeBottomSheetView.swift */; };
+		BBF2D918289C10930014A8D2 /* ContentTypeBottomSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF2D917289C10930014A8D2 /* ContentTypeBottomSheetView.xib */; };
+		BBF2D91A289C25470014A8D2 /* ContentTypeBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2D919289C25470014A8D2 /* ContentTypeBottomSheetViewModel.swift */; };
+		BBF2D91D289C263B0014A8D2 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2D91C289C263B0014A8D2 /* ContentType.swift */; };
 		CC7A35CFA50EDCC3E0C75EEA /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A3A89F151762633EA30FA /* HomeSection.swift */; };
 		CC7A38210D97EA7C85B0C8D1 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A34EA046A2E8A8C85F364 /* HomeDataSource.swift */; };
 		CC7A3E1D36537381B30D1366 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A30722D91C51F4BA8F42F /* HomeItem.swift */; };
@@ -182,6 +187,11 @@
 		BBE484DD282BFAD2006FA93D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BBE484DF282BFB5F006FA93D /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		BBEAA15428919BC0001DE037 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		BBF2D912289C07570014A8D2 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		BBF2D915289C10800014A8D2 /* ContentTypeBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTypeBottomSheetView.swift; sourceTree = "<group>"; };
+		BBF2D917289C10930014A8D2 /* ContentTypeBottomSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTypeBottomSheetView.xib; sourceTree = "<group>"; };
+		BBF2D919289C25470014A8D2 /* ContentTypeBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTypeBottomSheetViewModel.swift; sourceTree = "<group>"; };
+		BBF2D91C289C263B0014A8D2 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 		CC7A30722D91C51F4BA8F42F /* HomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 		CC7A34EA046A2E8A8C85F364 /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		CC7A3A89F151762633EA30FA /* HomeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
@@ -333,6 +343,7 @@
 		BB564893283E7EE5005ACD2A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BBF2D91B289C26250014A8D2 /* Library */,
 				BBA2F80028427F5E00473E8E /* Home */,
 			);
 			path = UI;
@@ -524,8 +535,27 @@
 				BBE484DD282BFAD2006FA93D /* BaseViewController.swift */,
 				BB4D7212285E2679006A43DD /* BaseViewModel.swift */,
 				BB6B5A452897F89500E84DB3 /* HasCellIdentifier.swift */,
+				BBF2D912289C07570014A8D2 /* BottomSheetViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BBF2D914289C0F800014A8D2 /* ContentTypeBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				BBF2D915289C10800014A8D2 /* ContentTypeBottomSheetView.swift */,
+				BBF2D917289C10930014A8D2 /* ContentTypeBottomSheetView.xib */,
+				BBF2D919289C25470014A8D2 /* ContentTypeBottomSheetViewModel.swift */,
+			);
+			path = ContentTypeBottomSheet;
+			sourceTree = "<group>";
+		};
+		BBF2D91B289C26250014A8D2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				BBF2D91C289C263B0014A8D2 /* ContentType.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		CC7A3A4F71BCEC4C8C889726 /* Search */ = {
@@ -548,6 +578,7 @@
 		CC7A3DA4E6345026704FA7DE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				BBF2D914289C0F800014A8D2 /* ContentTypeBottomSheet */,
 				BBA219E628998CB10017B81B /* LibraryTypeCollectionViewCell */,
 				BBA219DE289962AF0017B81B /* LibraryListTableViewCell */,
 				BB6B5A3E2897F5F200E84DB3 /* DataSource */,
@@ -659,6 +690,7 @@
 				BB0F752F281C520F00C2F80C /* gotham-regular.otf in Resources */,
 				BB4D721F285E3C81006A43DD /* CategoryCollectionViewCell.xib in Resources */,
 				BB0F752E281C520F00C2F80C /* gotham-italic.otf in Resources */,
+				BBF2D918289C10930014A8D2 /* ContentTypeBottomSheetView.xib in Resources */,
 				BBA219EA28998D150017B81B /* LibraryTypeCollectionViewCell.xib in Resources */,
 				BBDD38A72860C84900D18724 /* SearchHeaderTableViewCell.xib in Resources */,
 				BB4E0E6628197E7700DD56B7 /* Assets.xcassets in Resources */,
@@ -690,6 +722,7 @@
 				BB6B5A422897F70900E84DB3 /* LibrarySection.swift in Sources */,
 				BB4D721A285E3364006A43DD /* CategoryItemViewModel.swift in Sources */,
 				BBBD7E14283FC7D10065498A /* HomeHeaderTableViewCell.swift in Sources */,
+				BBF2D913289C07570014A8D2 /* BottomSheetViewController.swift in Sources */,
 				BBE484E0282BFB5F006FA93D /* UIColorExtensions.swift in Sources */,
 				BBA219E1289962DA0017B81B /* LibraryListTableViewCell.swift in Sources */,
 				BB78D32D2864B511008CCFDF /* SearchAndHistoryViewController.swift in Sources */,
@@ -701,6 +734,7 @@
 				BBAF7D54284928FC00BD55A7 /* HomeItemType.swift in Sources */,
 				BBBD7E17283FCCDE0065498A /* HomeViewModel.swift in Sources */,
 				BB4D721E285E3C81006A43DD /* CategoryCollectionViewCell.swift in Sources */,
+				BBF2D91D289C263B0014A8D2 /* ContentType.swift in Sources */,
 				BBDD38A2285F2C5B00D18724 /* CategoriesTableViewCellViewModel.swift in Sources */,
 				BBDD38A62860C84900D18724 /* SearchHeaderTableViewCell.swift in Sources */,
 				BBD134562862A4C4008B19D3 /* SpotifySearchBoxViewModel.swift in Sources */,
@@ -710,9 +744,11 @@
 				BB0F751F281C4B0000C2F80C /* Font.swift in Sources */,
 				BB95F1BD2830D4CE00BC0A93 /* SpotifyTabBar.swift in Sources */,
 				BB4D7221285E464C006A43DD /* SearchItem.swift in Sources */,
+				BBF2D916289C10800014A8D2 /* ContentTypeBottomSheetView.swift in Sources */,
 				BB6B5A462897F89500E84DB3 /* HasCellIdentifier.swift in Sources */,
 				BB4E0E7E2819A39600DD56B7 /* Colors.swift in Sources */,
 				BB4D7227285EC53F006A43DD /* DynamicHeightCollectionView.swift in Sources */,
+				BBF2D91A289C25470014A8D2 /* ContentTypeBottomSheetViewModel.swift in Sources */,
 				BB4D7211285E2549006A43DD /* SearchViewModel.swift in Sources */,
 				BB6B5A402897F64700E84DB3 /* LibraryItem.swift in Sources */,
 				BBEAA15528919BC0001DE037 /* UITableViewExtensions.swift in Sources */,
