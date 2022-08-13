@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham-regular.otf">
+            <string>SVN-Gotham</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpotifySearchBox" customModule="SpotifyUIClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swo-wI-xxI">
+                    <rect key="frame" x="16" y="8" width="465" height="191"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Nghệ sĩ, bài hát hoặc podcast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-H5-ZeJ">
+                            <rect key="frame" x="50" y="84" width="208.5" height="19"/>
+                            <fontDescription key="fontDescription" name="SVN-Gotham" family="SVN-Gotham" pointSize="14"/>
+                            <color key="textColor" red="0.062745098040000002" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="yhq-7x-C5E">
+                            <rect key="frame" x="8" y="82.5" width="26" height="26"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="E2x-CF-Fut"/>
+                                <constraint firstAttribute="width" constant="26" id="JFH-zz-PYs"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Pna-H5-ZeJ" firstAttribute="centerY" secondItem="swo-wI-xxI" secondAttribute="centerY" constant="-2" id="EDH-yo-v3y"/>
+                        <constraint firstItem="Pna-H5-ZeJ" firstAttribute="leading" secondItem="yhq-7x-C5E" secondAttribute="trailing" constant="16" id="FT5-ul-bIr"/>
+                        <constraint firstItem="yhq-7x-C5E" firstAttribute="leading" secondItem="swo-wI-xxI" secondAttribute="leading" constant="8" id="No0-GO-JMl"/>
+                        <constraint firstItem="yhq-7x-C5E" firstAttribute="centerY" secondItem="swo-wI-xxI" secondAttribute="centerY" id="n6g-zu-2e6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="swo-wI-xxI" secondAttribute="bottom" constant="8" id="4gq-2L-YAc"/>
+                <constraint firstAttribute="trailing" secondItem="swo-wI-xxI" secondAttribute="trailing" constant="16" id="DCg-Dk-Ee6"/>
+                <constraint firstItem="swo-wI-xxI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="aGS-FT-WXM"/>
+                <constraint firstItem="swo-wI-xxI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="lSi-nZ-8IZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchBackgroundView" destination="swo-wI-xxI" id="O91-VJ-onz"/>
+            </connections>
+            <point key="canvasLocation" x="306.52173913043481" y="236.04910714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="12" height="12"/>
+    </resources>
+</document>

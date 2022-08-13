@@ -11,20 +11,14 @@ import SnapKit
 class MainViewController: UITabBarController {
     private var spotifyTabBar: SpotifyTabBar!
 
-    private let homeViewController = HomeViewController()
-    private let searchViewController = SearchViewController()
-    private let libraryViewController = LibraryViewController()
-
-    private var homeNavigation: UINavigationController!
-    private var searchNavigation: UINavigationController!
-    private var libraryNavigation: UINavigationController!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTabBar()
 
         self.navigationController?.isNavigationBarHidden = true
+        self.view.backgroundColor = UIColor.init(red: 16, green: 16, blue: 16)
+        self.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,18 +38,23 @@ class MainViewController: UITabBarController {
         spotifyTabBar.clipsToBounds = true
         spotifyTabBar.itemTapped = changeTab(index:)
         tabBar.addSubview(spotifyTabBar)
-        tabBar.backgroundImage = UIImage()
         tabBar.layer.borderColor = UIColor.clear.cgColor
+        
+        // This do the tricks with tabbar blur background and shadow color
+        tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         
-        spotifyTabBar.snp.makeConstraints { (make) -> Void in
+        spotifyTabBar.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.left.equalToSuperview()
             make.right.equalToSuperview()
         }
         
         tabItems.forEach {
-            controllers.append($0.viewController)
+            let navigationController = UINavigationController(rootViewController: $0.viewController)
+            navigationController.isNavigationBarHidden = true
+            navigationController.isToolbarHidden = true
+            controllers.append(navigationController)
         }
 
         self.viewControllers = controllers
@@ -84,12 +83,6 @@ class MainViewController: UITabBarController {
         tabBar.addSubview(tabBarGradientView)
         tabBar.sendSubviewToBack(tabBarGradientView)
         
-        NSLayoutConstraint.activate([
-            tabBarGradientView.topAnchor.constraint(equalTo: tabBar.topAnchor, constant: 0),
-            tabBarGradientView.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor, constant: 0),
-            tabBarGradientView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            tabBarGradientView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-        ])
         tabBarGradientView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
@@ -97,4 +90,29 @@ class MainViewController: UITabBarController {
             make.right.equalToSuperview()
         }
     }
+}
+
+extension MainViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController != tabBarController.viewControllers?[1] {
+            if let secondNavController = tabBarController.viewControllers?[1] as? UINavigationController {
+                if secondNavController.viewControllers.first is SearchViewController {
+                    secondNavController.popToRootViewController(animated: false)
+                }
+            }
+            return true
+        }
+        if viewController == selectedViewController {
+            if let viewController = viewController as? UINavigationController {
+                if viewController.viewControllers.last is SearchAndHistoryViewController {
+                    viewController.popToRootViewController(animated: false)
+                } else {
+                    viewController.pushViewController(SearchAndHistoryViewController(), animated: false)
+                }
+            }
+            return false
+        }
+        return true
+    }
+    
 }

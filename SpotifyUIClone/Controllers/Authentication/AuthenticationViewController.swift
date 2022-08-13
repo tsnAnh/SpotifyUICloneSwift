@@ -9,9 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AuthenticationViewController: UIViewController {
-
-    private var disposeBag = DisposeBag()
+class AuthenticationViewController: BaseViewController {
 
     @IBOutlet weak var btnLogin: SpotifyButton!
 
