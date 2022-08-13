@@ -6,5 +6,8 @@
 //
 
 enum LibraryItem {
-    case LibraryList
+    case ContentTypeAndListType
+    case LibraryList(libraryItems: [LibraryItemProtocol])
+    case AddArtist
+    case AddPodcastAndProgram
 }

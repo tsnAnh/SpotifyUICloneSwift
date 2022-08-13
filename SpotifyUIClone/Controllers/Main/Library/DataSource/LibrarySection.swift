@@ -8,7 +8,6 @@
 import Differentiator
 
 enum LibrarySection {
-    case HeaderSection(items: [LibraryItem])
     case LibraryListSection(items: [LibraryItem])
 }
 
@@ -17,8 +16,6 @@ extension LibrarySection: SectionModelType {
     
     var items: [LibraryItem] {
         switch self {
-        case .HeaderSection(items: let items):
-            return items
         case .LibraryListSection(items: let items):
             return items
         }

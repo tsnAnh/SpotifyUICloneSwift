@@ -11,4 +11,7 @@
 class BaseViewModel {
     // TODO: Setup BaseViewModel
     // As I write this comment, I have no idea what to do in this class
+    func inject<T>() -> T {
+        return DIContainer.shared.inject()
+    }
 }

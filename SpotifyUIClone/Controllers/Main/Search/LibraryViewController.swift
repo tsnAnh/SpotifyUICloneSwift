@@ -41,9 +41,13 @@ class LibraryViewController: BaseViewController {
     
     private func setupTableView() {
         libraryTableView.register(LibraryListTableViewCell.self)
+        libraryTableView.register(ContentTypeAndListTypeCollectionViewCell.self)
         libraryTableView.separatorStyle = .none
         libraryTableView.allowsSelection = false
         libraryTableView.delegate = self
+        libraryTableView.estimatedRowHeight = 1
+        libraryTableView.rowHeight = UITableView.automaticDimension
+        libraryTableView.contentInset = .init(top: 0, left: 0, bottom: self.view?.window?.safeAreaInsets.bottom ?? 0, right: 0)
     }
     
     private func setupLibraryTypeCollectionView() {
@@ -75,6 +79,12 @@ class LibraryViewController: BaseViewController {
             ) { index, type, cell in
                 cell.text = type
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.isLibraryListLayoutGrid.asDriver(onErrorJustReturn: false)
+            .drive(onNext: {_ in
+                self.libraryTableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
+            })
             .disposed(by: disposeBag)
     }
     
